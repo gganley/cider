@@ -27,6 +27,7 @@
 * [#2151](https://github.com/clojure-emacs/cider/pull/2151): Improve formatting of spec in `cider-doc` buffer.
 * Remove support for CLJX.
 * Fix `cider-eval-region` masking `clojure-refactor-map` in `cider-repl-mode`.
+* [#2211](https://github.com/clojure-emacs/cider/issues/2211): Scope .dir-locals.el settings to specific modes.
 * [#2171](https://github.com/clojure-emacs/cider/issues/2171): Update `See Also` mappings for Clojure 1.9.
 
 ## 0.16.0 (2017-12-28)
