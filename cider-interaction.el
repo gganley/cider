@@ -339,6 +339,8 @@ When invoked with a prefix ARG the command doesn't prompt for confirmation."
 
 ;;;
 (declare-function cider-mode "cider-mode")
+(declare-function cider-connect "cider")
+(declare-function cider-jack-in "cider")
 
 (defun cider-jump-to (buffer &optional pos other-window)
   "Push current point onto marker ring, and jump to BUFFER and POS.
