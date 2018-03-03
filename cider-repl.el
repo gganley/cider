@@ -1398,8 +1398,6 @@ constructs."
 (declare-function cider-repl-history "cider-repl-history")
 (declare-function cider-run "cider-interaction")
 (declare-function cider-refresh "cider-interaction")
-
-(declare-function cider-selector "cider-selector")
 (declare-function cider-version "cider")
 (cider-repl-add-shortcut "clear-output" #'cider-repl-clear-output)
 (cider-repl-add-shortcut "clear" #'cider-repl-clear-buffer)
