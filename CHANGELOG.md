@@ -14,6 +14,7 @@
 * [#2160](https://github.com/clojure-emacs/cider/issues/2160): Make it possible to configure the default `*print-level*` and `*print-length*` via defcustoms (`cider-repl-print-level` and `cider-repl-print-length`).
 * New interactive command `cider-cheatsheet` allows you to browse the Clojure Cheatsheet with an Emacs interface.
 * [#2191](https://github.com/clojure-emacs/cider/issues/2191): Add support for jacking-in just with the `clojure` command-line tool and `tools.deps`.
+* Make it possible to start a Nashorn ClojureScript REPL.
 
 ### Bugs Fixed
 
@@ -32,6 +33,7 @@
 * [#2211](https://github.com/clojure-emacs/cider/issues/2211): Scope .dir-locals.el settings to specific modes.
 * [#2171](https://github.com/clojure-emacs/cider/issues/2171): Update `See Also` mappings for Clojure 1.9.
 * [#2202](https://github.com/clojure-emacs/cider/issues/2202): Make `cider-jack-in-clojurescript` prompt from the ClojureScript REPL type to use.
+* [#2202](https://github.com/clojure-emacs/cider/issues/2202): Don't try to start a ClojureScript REPL before checking whether that's possible or not.
 
 ## 0.16.0 (2017-12-28)
 

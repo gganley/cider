@@ -89,7 +89,7 @@ set to `display-only' the buffer will be displayed, but it will not become
 focused.  Otherwise the buffer is displayed and focused."
   :type '(choice (const :tag "Create the buffer, but don't display it" nil)
                  (const :tag "Create and display the buffer, but don't focus it"
-                   display-only)
+                        display-only)
                  (const :tag "Create, display, and focus the buffer" t))
   :group 'cider-repl)
 
@@ -123,7 +123,7 @@ change the setting's value."
 This sets the wrap point for pretty printing on the repl.  If nil, it
 defaults to the variable `fill-column'."
   :type '(restricted-sexp  :match-alternatives
-                          (integerp 'nil))
+                           (integerp 'nil))
   :group 'cider-repl
   :package-version '(cider . "0.15.0"))
 
@@ -280,7 +280,7 @@ efficiency."
   (let ((nrepl-sync-request-timeout nil))
     (with-current-buffer buffer
       (let* ((response (nrepl-send-sync-request
-                        (lax-plist-put (nrepl--eval-request "(str *ns*))")
+                        (lax-plist-put (nrepl--eval-request "(str *ns*)")
                                        "inhibit-cider-middleware" "true")
                         (cider-current-connection)))
              (initial-ns (or (read (nrepl-dict-get response "value"))
@@ -615,7 +615,7 @@ When there is a possible unfinished ansi control sequence,
           (unless (member root cider-repl--ns-roots)
             (push root cider-repl--ns-roots)
             (let ((roots (mapconcat
-                          ;; Replace _ or - with regexp patter to accommodate "raw" namespaces
+                          ;; Replace _ or - with regexp pattern to accommodate "raw" namespaces
                           (lambda (r) (replace-regexp-in-string "[_-]+" "[_-]+" r))
                           cider-repl--ns-roots "\\|")))
               (setq cider-repl--root-ns-regexp
@@ -1470,7 +1470,6 @@ constructs."
 (defvar cider-repl-mode-syntax-table
   (copy-syntax-table clojure-mode-syntax-table))
 
-(declare-function cider-eval-commands-map "cider-interaction")
 (declare-function cider-eval-last-sexp "cider-interaction")
 (declare-function cider-refresh "cider-interaction")
 (declare-function cider-toggle-trace-ns "cider-interaction")
